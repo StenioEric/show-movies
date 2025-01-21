@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import "./index.scss";
 import axios from "axios";
-import { Movie } from "@/type";
+import { Movie } from "@/type/movie";
 import MovieCard from "../MovieCard";
 
 export default function MovieList() {
@@ -28,9 +28,9 @@ export default function MovieList() {
 
   return (
     <ul className="movie-list">
-      {movies.map((movie) => 
-        <MovieCard movie={movie}/>
-      )}
+      {movies.map((movie) => (
+        <MovieCard key={movie.id} movie={movie} />
+      ))}
     </ul>
   );
 }
