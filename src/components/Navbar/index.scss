@@ -1,10 +1,27 @@
 .navbar {
-  background-color: #0a194b;
-  padding: 2rem 3%;
+  background-color: #181818;  // Fundo da navbar
+  padding: 1rem 3%;
   display: flex;
-  justify-content:center     ;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
 
-  .page-title{
+
+  .page-title {
     color: #fff;
+  }
+
+  .btn-default {
+    background-color: #f70909;  // Cor dos ícones na navbar
+    padding: 6px 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none ;
   }
 }
