@@ -24,27 +24,42 @@
 
     .movie-title{
       font-size: 12px;
-      color: #f1f5f9;
+      color: #e0e0e0; 
       margin-bottom: 5px;
     }
 
     .hidden-content {
-      color: #f1f5f9;
-      font-size: 12px;
-      margin-top: 8px;
       height: 0px;
       opacity: 0;
       transition: all .6s;
 
       .btn-default {
-        background-color: #6046ff;
-        padding: 6px 8px;
-        border-radius: 4px;
+        display: inline-block;
         margin-top: 10px;
+        padding: 6px 8px;
+        background-color: #f30a0a;
         color: #fff;
-        border: none;
-        cursor: pointer;
         width: 100%;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s ease;
+      
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      
+          li {
+            text-align: center;
+          }
+        }
+      
+        &:hover {
+          background-color: #a00404;
+        }
       }
     }
   }
