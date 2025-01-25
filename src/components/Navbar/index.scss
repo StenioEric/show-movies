@@ -1,27 +1,62 @@
 .navbar {
-  background-color: #181818;  // Fundo da navbar
+  background-color: #222121;  // Fundo da navbar
   padding: 1rem 3%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;  
   align-items: center;
-  display: flex;
   width: 100%;
-  justify-content: space-between;
   gap: 10px;
 
-
   .page-title {
+    font-size: 24px;
+    font-weight: bold;
     color: #fff;
+    text-align: center;
+    flex: 1;  
   }
 
-  .btn-default {
-    background-color: #f70909;  // Cor dos ícones na navbar
-    padding: 6px 8px;
-    border-radius: 4px;
-    margin-top: 10px;
-    color: #fff;
+  .search-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;  
+
+    .search-input {
+      padding: 10px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      background-color: #2c2c2c;
+      color: #fff;
+    }
+
+    .btn-default {
+      padding: 10px 20px;
+      background-color: #f51008;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff;
+      font-weight: bold;
+      list-style: none;
+    }
+  }
+
+  .btn-home {
+    padding: 10px 20px;
+    background-color: #f51008;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    list-style: none;
-    text-decoration: none ;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .btn-default:hover {
+    background-color: #e55d00;
+  }
+
+  .btn-home:hover {
+    background-color: #e55d00;
   }
 }
+
