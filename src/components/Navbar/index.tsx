@@ -16,7 +16,8 @@ export default function Navbar() {
 
   // Efeito que realiza a pesquisa sempre que o valor de searchQuery é atualizado
   useEffect(() => {
-    if (!searchQuery.trim()) { // Verifica se a query é válida (não vazia)
+    if (!searchQuery.trim()) {
+      // Verifica se a query é válida (não vazia)
       setResultMovies([]); // Limpa os resultados se a query estiver vazia
       return;
     }
@@ -67,7 +68,6 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <h1 className="page-title">ShowFilmes</h1> {/* Título da Navbar */}
-
       <div className="button">
         {/* Formulário de pesquisa de filmes */}
         <div className="divform">
@@ -84,15 +84,29 @@ export default function Navbar() {
             </button>
           </form>
         </div>
-        
+
         {/* Link para retornar à página inicial */}
         <div className="home-link">
-          <Link href="/" onClick={handleHomeClick} className="btn-home">
+          <Link 
+            href="/" 
+            onClick={handleHomeClick} 
+            className="btn-home">
             <span>Home</span>
           </Link>
         </div>
-      </div>
 
+        {/* Link para ir ao repositório no GitHub */}
+        <div className="home-link">
+          <Link
+            href="https://github.com/StenioEric/show-movies"
+            className="btn-home"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Sobre o Projeto</span>
+          </Link>
+        </div>
+      </div>
       {/* Renderiza os resultados da pesquisa caso existam */}
       {searchQuery && <SearchResults movies={resultMovies} loading={loading} />}
     </nav>
